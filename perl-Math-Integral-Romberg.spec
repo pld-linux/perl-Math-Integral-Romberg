@@ -1,0 +1,55 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
+%include	/usr/lib/rpm/macros.perl
+%define		pdir	Math
+%define		pnam	Integral-Romberg
+Summary:	Math::Integral::Romberg - scalar numerical integration
+Summary(pl):	Math::Integral::Romberg - ca³kowanie numeryczne
+Name:		perl-Math-Integral-Romberg
+Version:	0.02
+Release:	1
+License:	GPL/Artistic
+Group:		Development/Languages/Perl
+%define	sver	%(echo %{version} | tr . _)
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{sver}.tar.gz
+BuildRequires:	perl >= 5.6
+BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%description
+Math::Integral::Romberg module numerically estimates the integral of
+function using Romberg integration, a faster relative of Simpson's
+method.
+
+%description -l pl
+Modu³ Math::Integral::Romberg numerycznie przybli¿a warto¶æ ca³ki
+funkcji przy u¿yciu ca³kowania Romberga, szybszego ni¿ metoda
+Simpsona.
+
+%prep
+%setup -q -n %{pdir}-%{pnam}-%{version}
+
+%build
+perl Makefile.PL
+%{__make}
+
+%{!?_without_tests:%{__make} test}
+
+%install
+rm -rf $RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc README Release
+%dir %{perl_sitelib}/Math/Integral
+%{perl_sitelib}/Math/Integral/Romberg.pm
+%{_mandir}/man3/*
