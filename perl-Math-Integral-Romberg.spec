@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Math
-%define		pnam	Integral-Romberg
+%define	pdir	Math
+%define	pnam	Integral-Romberg
 Summary:	Math::Integral::Romberg - scalar numerical integration
 Summary(pl):	Math::Integral::Romberg - ca³kowanie numeryczne
 Name:		perl-Math-Integral-Romberg
