@@ -16,7 +16,7 @@ Group:		Development/Languages/Perl
 %define	sver	%(echo %{version} | tr . _)
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{sver}.tar.gz
 # Source0-md5:	932ea744c11f34b5506a14637ef0421a
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
