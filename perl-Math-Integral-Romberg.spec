@@ -9,13 +9,13 @@ Summary:	Math::Integral::Romberg - scalar numerical integration
 Summary(pl):	Math::Integral::Romberg - ca³kowanie numeryczne
 Name:		perl-Math-Integral-Romberg
 Version:	0.02
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 %define	sver	%(echo %{version} | tr . _)
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{sver}.tar.gz
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +33,8 @@ Simpsona.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:%{__make} test}
@@ -50,6 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README Release
-%dir %{perl_sitelib}/Math/Integral
-%{perl_sitelib}/Math/Integral/Romberg.pm
+%dir %{perl_vendorlib}/Math/Integral
+%{perl_vendorlib}/Math/Integral/Romberg.pm
 %{_mandir}/man3/*
