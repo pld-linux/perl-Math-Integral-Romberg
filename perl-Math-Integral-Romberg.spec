@@ -14,6 +14,7 @@ License:	GPL/Artistic
 Group:		Development/Languages/Perl
 %define	sver	%(echo %{version} | tr . _)
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{sver}.tar.gz
+# Source0-md5:	932ea744c11f34b5506a14637ef0421a
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
