@@ -10,7 +10,8 @@ Summary(pl):	Math::Integral::Romberg - ca³kowanie numeryczne
 Name:		perl-Math-Integral-Romberg
 Version:	0.02
 Release:	2
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 %define	sver	%(echo %{version} | tr . _)
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{sver}.tar.gz
