@@ -6,7 +6,7 @@
 %define		pdir	Math
 %define		pnam	Integral-Romberg
 Summary:	Math::Integral::Romberg - scalar numerical integration
-Summary(pl):	Math::Integral::Romberg - ca≥kowanie numeryczne
+Summary(pl.UTF-8):   Math::Integral::Romberg - ca≈Çkowanie numeryczne
 Name:		perl-Math-Integral-Romberg
 Version:	0.02
 %define	_ver	%(echo %{version} | tr . _)
@@ -26,9 +26,9 @@ Math::Integral::Romberg module numerically estimates the integral of
 function using Romberg integration, a faster relative of Simpson's
 method.
 
-%description -l pl
-Modu≥ Math::Integral::Romberg numerycznie przybliøa warto∂Ê ca≥ki
-funkcji przy uøyciu ca≥kowania Romberga, szybszego niø metoda
+%description -l pl.UTF-8
+Modu≈Ç Math::Integral::Romberg numerycznie przybli≈ºa warto≈õƒá ca≈Çki
+funkcji przy u≈ºyciu ca≈Çkowania Romberga, szybszego ni≈º metoda
 Simpsona.
 
 %prep
