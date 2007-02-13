@@ -6,7 +6,7 @@
 %define		pdir	Math
 %define		pnam	Integral-Romberg
 Summary:	Math::Integral::Romberg - scalar numerical integration
-Summary(pl.UTF-8):   Math::Integral::Romberg - całkowanie numeryczne
+Summary(pl.UTF-8):	Math::Integral::Romberg - całkowanie numeryczne
 Name:		perl-Math-Integral-Romberg
 Version:	0.02
 %define	_ver	%(echo %{version} | tr . _)
