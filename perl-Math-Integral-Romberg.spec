@@ -10,7 +10,7 @@ Summary(pl.UTF-8):	Math::Integral::Romberg - całkowanie numeryczne
 Name:		perl-Math-Integral-Romberg
 Version:	0.02
 %define	_ver	%(echo %{version} | tr . _)
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
