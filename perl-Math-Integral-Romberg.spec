@@ -4,7 +4,6 @@
 
 %define		pdir	Math
 %define		pnam	Integral-Romberg
-%include	/usr/lib/rpm/macros.perl
 Summary:	Math::Integral::Romberg - scalar numerical integration
 Summary(pl.UTF-8):	Math::Integral::Romberg - całkowanie numeryczne
 %define	_ver	%(echo %{version} | tr . _)
